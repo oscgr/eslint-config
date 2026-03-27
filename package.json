@@ -1,0 +1,36 @@
+{
+  "name": "@oscgr/eslint-config",
+  "type": "module",
+  "version": "1.0.0",
+  "exports": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:report": "eslint '.' --format json --output-file sonar-report.json; exit 0",
+    "lint:ci": "pnpm run lint:report"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.5.0"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^7.7.3",
+    "@eslint/eslintrc": "^3.3.5",
+    "eslint-plugin-vuetify": "^2.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "flatted@<3.4.0": ">=3.4.0",
+      "flatted@<=3.4.1": ">=3.4.2",
+      "yaml@>=2.0.0 <2.8.3": ">=2.8.3",
+      "picomatch@>=4.0.0 <4.0.4": ">=4.0.4",
+      "brace-expansion@<5.0.5": ">=5.0.5"
+    }
+  }
+}
