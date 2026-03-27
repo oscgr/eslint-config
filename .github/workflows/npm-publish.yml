@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org/
-      - run: pnpm ci
+      - run: pnpm i --frozen-lockfile
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
