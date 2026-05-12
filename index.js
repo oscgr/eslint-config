@@ -1,16 +1,14 @@
 import antfu from '@antfu/eslint-config'
-import vuetify from 'eslint-plugin-vuetify'
 
 /**
  * Generate eslint configuration.
  * @param {object} config
  * @param {boolean | undefined} config.vue - Is the project a vue Project
  * @param {2 | 3 | undefined} config.vueVersion - Vue version. Defaults to 3
- * @param {boolean | undefined} config.vuetifyMigration - Is the project is migrating from Vuetify 2 to 3
  * @param {any[] | undefined} additionalUserConfigs - additional custom configs
  */
 const Config = (config, ...additionalUserConfigs) => {
-  const { vue = true, vueVersion = 3, vuetifyMigration = false } = config
+  const { vue = true, vueVersion = 3 } = config
   return antfu(
     {
       vue: vue && {
@@ -77,7 +75,6 @@ const Config = (config, ...additionalUserConfigs) => {
       },
     },
     [
-      ...(vuetifyMigration ? vuetify.configs['flat/recommended'] : []),
       ...(additionalUserConfigs || []),
     ],
   )

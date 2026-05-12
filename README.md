@@ -10,7 +10,7 @@ To install dependencies, use `pnpm`.
 ## Publish to NPM
 
 ```
-npm publish
+pnpm publish
 ```
 
 ## Credits

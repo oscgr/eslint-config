@@ -8,28 +8,19 @@
     "index.js"
   ],
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "pnpx only-allow pnpm",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "generate-licences": "pnpm licenses ls --prod --long > LICENCES.txt"
   },
   "peerDependencies": {
-    "eslint": ">=9.5.0"
+    "eslint": ">=10.0.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^7.7.3",
-    "@eslint/eslintrc": "^3.3.5",
-    "eslint-plugin-vuetify": "^2.7.2"
+    "@antfu/eslint-config": "^8.2.0",
+    "@eslint/eslintrc": "^3.3.5"
   },
   "devDependencies": {
-    "eslint": "^9.39.4"
-  },
-  "pnpm": {
-    "overrides": {
-      "flatted@<3.4.0": ">=3.4.0",
-      "flatted@<=3.4.1": ">=3.4.2",
-      "yaml@>=2.0.0 <2.8.3": ">=2.8.3",
-      "picomatch@>=4.0.0 <4.0.4": ">=4.0.4",
-      "brace-expansion@<5.0.5": ">=5.0.5"
-    }
+    "eslint": "^10.2.1"
   }
 }
