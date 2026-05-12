@@ -2,8 +2,9 @@
   "name": "@oscgr/eslint-config",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.33.0",
+  "description": "Personal ESLint config",
   "exports": "./index.js",
+  "repository": "https://github.com/oscgr/eslint-config.git",
   "files": [
     "index.js"
   ],
@@ -11,7 +12,8 @@
     "preinstall": "pnpx only-allow pnpm",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "generate-licences": "pnpm licenses ls --prod --long > LICENCES.txt"
+    "generate-licences": "pnpm licenses ls --prod --long > LICENCES.txt",
+    "publish": "pnpm publish --no-git-checks"
   },
   "peerDependencies": {
     "eslint": ">=10.0.0"
@@ -22,5 +24,8 @@
   },
   "devDependencies": {
     "eslint": "^10.2.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
