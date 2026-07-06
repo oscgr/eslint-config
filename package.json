@@ -19,11 +19,11 @@
     "eslint": ">=10.0.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^8.2.0",
+    "@antfu/eslint-config": "^9.1.0",
     "@eslint/eslintrc": "^3.3.5"
   },
   "devDependencies": {
-    "eslint": "^10.2.1"
+    "eslint": "^10.6.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
